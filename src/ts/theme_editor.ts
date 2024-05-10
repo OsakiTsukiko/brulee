@@ -4,11 +4,12 @@ import { theme, update_theme } from "./config_manager";
 
 export { theme_selector_button_listener, root };
 
-let root = document.querySelector(':root') as HTMLElement;
+let root = document.querySelector(":root") as HTMLElement;
 
 let theme_selector_button_listener = () => {
-    const theme_selector_window = new WebviewWindow('themeSelectorWindow', {
-        url: '/subwindows/theme_settings/index.html'
+    const theme_selector_window = new WebviewWindow("themeSelectorWindow", {
+        url: "/subwindows/theme_settings/index.html",
+        title: "Brulee - Theme Editor"
     });
 
     theme_selector_window.once('tauri://created', function () {
