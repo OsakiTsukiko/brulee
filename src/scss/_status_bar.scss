@@ -1,0 +1,95 @@
+.status-bar {
+    width: 100%;
+    height: fit-content;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 5px;
+    gap: 5px;
+
+    .status-icon {
+        font-size: 18px;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 27px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        &.status-loading {
+            background: royalblue;
+            color: rgb(34, 50, 95);
+            i {
+
+            }
+        }
+
+        &.status-success {
+            background: rgb(88, 197, 135);
+            color: rgb(41, 99, 66);
+        }
+
+        &.status-warning {
+            background: rgb(233, 225, 122);
+            color: rgb(126, 122, 74);
+        }
+
+        &.status-error {
+            background: rgb(231, 99, 75);
+            color: rgb(122, 52, 39);
+        }
+
+        &.status-none {
+            background: white;
+            color: gray;
+            opacity: .25;
+        }
+    }
+
+    .status-text {
+        width: fit-content;
+        height: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Rubik Mono One";
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .padding {
+        height: 100%;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .title {width: fit-content;
+        height: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Rubik Mono One";
+        padding-left: 5px;
+        // padding-right: 5px;
+    }
+
+    .title-icon {
+        box-sizing: border-box;
+        width: 27px;
+        height: 27px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            background: blue($color: #000000);
+        }
+    }
+}

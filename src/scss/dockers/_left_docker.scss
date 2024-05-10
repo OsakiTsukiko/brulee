@@ -1,0 +1,41 @@
+.left-docker {
+    width: fit-content;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    .button-cont {
+        height: 100%;
+        width: fit-content;
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 5px;
+        gap: 5px;
+
+        .button {
+            font-size: 20px;
+            box-sizing: border-box;
+            padding: 5px;
+            width: 35px;
+            min-width: 35px;
+            height: 35px;
+            min-height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;   
+        }
+
+        .padding {
+            width: 100%;
+            flex: 1;
+            min-height: 0;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+:root {
+    // main cont
+    --main-cont-background: #292828;
+    
+    // docker cont
+        // left docker
+        --docker-cont-left-docker-background: #363636;
+        // button docker
+        --docker-cont-button-docker-background: #363636;
+        // docker button
+        --docker-cont-docker-button-background: #292828;
+        --docker-cont-docker-button-color: #787070;
+        --docker-cont-docker-button-border-radius: 5px;
+        --docker-cont-docker-button-transition: .125s;
+        --docker-cont-docker-button-hover-color: #a89d9d;
+        --docker-cont-docker-button-disabled-background: #292828;
+        --docker-cont-docker-button-disabled-color: #3e3a3a;
+    
+    // status bar
+    --status-bar-background: #1c1b1b;
+    --status-bar-color: #a89d9d;
+    --status-bar-text-color: #787070;
+    --status-bar-title-color: #787070;
+}
+
+.main-cont {
+    background-color: var(--main-cont-background);
+
+    .title-bar {
+    }
+
+    .docker-cont {
+        .left-docker {
+            background: var(--docker-cont-left-docker-background);
+        }
+
+        .button-docker {
+            background: var(--docker-cont-button-docker-background);
+        }
+
+        .docker-button {
+            background: var(--docker-cont-docker-button-background);
+            color: var(--docker-cont-docker-button-color);
+            border-radius: var(--docker-cont-docker-button-border-radius);
+        
+            transition: var(--docker-cont-docker-button-transition);
+        
+            &:hover {
+                color: var(--docker-cont-docker-button-hover-color);
+            }
+        
+            &.button-disabled {
+                background: var(--docker-cont-docker-button-disabled-background);
+                color: var(--docker-cont-docker-button-disabled-color);
+            }
+        }
+    }
+
+    .status-bar {
+        background: var(--status-bar-background);
+        color: var(--status-bar-color);
+
+        .status-text {
+            color: var(--status-bar-text-color);
+        }
+
+        .title {
+            color: var(--status-bar-title-color);
+        }
+    }
+}
