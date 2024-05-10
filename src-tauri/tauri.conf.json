@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "brulee",
-    "version": "0.0.0"
+    "version": "0.0.2"
   },
   "tauri": {
     "allowlist": {
@@ -16,13 +16,16 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": true
       }
     },
     "windows": [
       {
-        "title": "brulee",
-        "width": 800,
-        "height": 600
+        "title": "Brulee - Cute C/CPP IDE",
+        "width": 1350,
+        "height": 750
       }
     ],
     "security": {
