@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/OsakiTsukiko/brulee/assets/104794884/ee3b8772-1ebb-4e33-b1d2-b5b8a07c7e33" width="25%"/>
+  <img src="https://github.com/OsakiTsukiko/brulee/assets/104794884/a12b25c6-7fd9-4508-a1b0-d098d01146d1" width="25%"/>
   <h1>Brulee</h1>
   <p>A <b>cute</b> and hopefully <b>simple</b> C/CPP IDE.</p>
 </div>
