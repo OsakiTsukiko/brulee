@@ -29,7 +29,10 @@
         "removeFile": true,
         "renameFile": true,
         "exists": true,
-        "scope": ["$APPCONFIG/theme", "$APPCONFIG/theme/*"]
+        "scope": [
+          "$APPCONFIG/theme", 
+          "$APPCONFIG/theme/*"
+        ]
       }
     },
     "windows": [

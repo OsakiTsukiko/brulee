@@ -54,6 +54,23 @@
                 color: var(--docker-cont-docker-button-disabled-color);
             }
         }
+
+        .editor-docker {
+            .tab {
+                color: #787070; 
+                border-right-color: #363636;
+
+                &.selected {
+                    border-bottom-color: pink;
+                }
+
+                .tab-btns {
+                    &:hover {
+                        color: #a89d9d;
+                    }
+                }
+            }
+        }
     }
 
     .status-bar {

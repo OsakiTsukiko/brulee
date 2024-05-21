@@ -40,6 +40,16 @@
   background: var(--docker-cont-docker-button-disabled-background);
   color: var(--docker-cont-docker-button-disabled-color);
 }
+.main-cont .docker-cont .editor-docker .tab {
+  color: #787070;
+  border-right-color: #363636;
+}
+.main-cont .docker-cont .editor-docker .tab.selected {
+  border-bottom-color: pink;
+}
+.main-cont .docker-cont .editor-docker .tab .tab-btns:hover {
+  color: #a89d9d;
+}
 .main-cont .status-bar {
   background: var(--status-bar-background);
   color: var(--status-bar-color);
@@ -113,6 +123,116 @@
   height: 100%;
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont {
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* width */
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont::-webkit-scrollbar {
+  display: none;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab {
+  min-width: 120px;
+  max-width: 250px;
+  display: flex;
+  box-sizing: border-box;
+  border-right-width: 2px;
+  border-right-style: solid;
+  cursor: pointer;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab:last-child {
+  border-right: 0px solid transparent;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab.selected {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-icon {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  font-size: 17.5px;
+  padding: 5px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-title {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-title span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-btns {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 7.5px;
+  font-size: 15px;
+  transition: 0.125s;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .btn-cont {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 0px;
+  background: #1a1a1a;
+  box-sizing: border-box;
+  padding: 7.5px;
+  display: flex;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .btn-cont i {
+  color: #787070;
+  font-size: 17.5px;
+  cursor: pointer;
+  transition: 0.125s;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .btn-cont i:hover {
+  color: #a89d9d;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .content-cont {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
 }
 .main-cont .docker-cont .button-docker {
   height: 100%;
