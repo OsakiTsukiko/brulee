@@ -1,20 +1,5 @@
 import { emit, listen, once } from "@tauri-apps/api/event";
 
-const theme_color_variables = [
-    "--main-cont-background",
-    "--docker-cont-left-docker-background",
-    "--docker-cont-button-docker-background",
-    "--docker-cont-docker-button-background",
-    "--docker-cont-docker-button-color",
-    "--docker-cont-docker-button-hover-color",
-    "--docker-cont-docker-button-disabled-background",
-    "--docker-cont-docker-button-disabled-color",
-    "--status-bar-background",
-    "--status-bar-color",
-    "--status-bar-text-color",
-    "--status-bar-title-color",
-] // I hope I didn't miss any..
-
 let output_ta = document.getElementById("output")!;
 let input_ta = document.getElementById("input")!;
 
@@ -44,7 +29,7 @@ function continue_execution() {
     update_output();
 
     let varlist = document.getElementById("var-list")!;
-    for (let color_var of theme_color_variables) {
+    for (let color_var in color_dict) {
         /*
             <div class="var">
                 <label for="varname">--varname</label>

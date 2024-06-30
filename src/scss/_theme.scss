@@ -1,88 +1,105 @@
 :root {
     // main cont
-    --main-cont-background: #292828;
+    --color--main-cont-background: #292828;
     
     // docker cont
         // left docker
-        --docker-cont-left-docker-background: #363636;
+        --color--docker-cont-left-docker-background: #363636;
         // button docker
-        --docker-cont-button-docker-background: #363636;
+        --color--docker-cont-button-docker-background: #363636;
         // docker button
-        --docker-cont-docker-button-background: #292828;
-        --docker-cont-docker-button-color: #787070;
-        --docker-cont-docker-button-border-radius: 5px;
-        --docker-cont-docker-button-transition: .125s;
-        --docker-cont-docker-button-hover-color: #a89d9d;
-        --docker-cont-docker-button-disabled-background: #292828;
-        --docker-cont-docker-button-disabled-color: #3e3a3a;
+        --color--docker-cont-docker-button-background: #292828;
+        --color--docker-cont-docker-button-color: #787070;
+        --px--docker-cont-docker-button-border-radius: 5px;
+        --time--docker-cont-docker-button-transition: .125s;
+        --color--docker-cont-docker-button-hover-color: #a89d9d;
+        --color--docker-cont-docker-button-disabled-background: #292828;
+        --color--docker-cont-docker-button-disabled-color: #3e3a3a;
+        // editor docker
+        --color--docker-cont-editor-docker-tab-container-background: #1c1b1b;
+        --color--docker-cont-editor-docker-tab-color: #787070;
+        --color--docker-cont-editor-docker-tab-background: #292828;
+        --color--docker-cont-editor-docker-tab-border-right-color: #363636;
+        --color--docker-cont-editor-docker-tab-border-bottom-color-selected: #e6c0c0;
+        --color--docker-cont-editor-docker-tab-btn-color-hover: #a89d9d;
     
     // status bar
-    --status-bar-background: #1c1b1b;
-    --status-bar-color: #a89d9d;
-    --status-bar-text-color: #787070;
-    --status-bar-title-color: #787070;
+    --color--status-bar-background: #1c1b1b;
+    --color--status-bar-color: #a89d9d;
+    --color--status-bar-text-color: #787070;
+    --color--status-bar-title-color: #787070;
 }
 
 .main-cont {
-    background-color: var(--main-cont-background);
+    background-color: var(--color--main-cont-background);
 
     .title-bar {
     }
 
     .docker-cont {
         .left-docker {
-            background: var(--docker-cont-left-docker-background);
+            background: var(--color--docker-cont-left-docker-background);
         }
 
         .button-docker {
-            background: var(--docker-cont-button-docker-background);
+            background: var(--color--docker-cont-button-docker-background);
         }
 
         .docker-button {
-            background: var(--docker-cont-docker-button-background);
-            color: var(--docker-cont-docker-button-color);
-            border-radius: var(--docker-cont-docker-button-border-radius);
+            background: var(--color--docker-cont-docker-button-background);
+            color: var(--color--docker-cont-docker-button-color);
+            border-radius: var(--px--docker-cont-docker-button-border-radius);
         
-            transition: var(--docker-cont-docker-button-transition);
+            transition: var(--time--docker-cont-docker-button-transition);
         
             &:hover {
-                color: var(--docker-cont-docker-button-hover-color);
+                color: var(--color--docker-cont-docker-button-hover-color);
             }
         
             &.button-disabled {
-                background: var(--docker-cont-docker-button-disabled-background);
-                color: var(--docker-cont-docker-button-disabled-color);
+                background: var(--color--docker-cont-docker-button-disabled-background);
+                color: var(--color--docker-cont-docker-button-disabled-color);
             }
         }
 
         .editor-docker {
-            .tab {
-                color: #787070; 
-                border-right-color: #363636;
-
-                &.selected {
-                    border-bottom-color: pink;
-                }
-
-                .tab-btns {
-                    &:hover {
-                        color: #a89d9d;
+            .top-bar {
+                .tab-cont {
+                    background: var(--color--docker-cont-editor-docker-tab-container-background);
+                
+                    .tab {
+                        background: var(--color--docker-cont-editor-docker-tab-background);
+                        color: var(--color--docker-cont-editor-docker-tab-color); 
+                        border-right-color: var(--color--docker-cont-editor-docker-tab-border-right-color);
+        
+                        border-bottom-color: var(--color--docker-cont-editor-docker-tab-background);
+        
+                        &.selected {
+                            border-bottom-color: var(--color--docker-cont-editor-docker-tab-border-bottom-color-selected);
+                        }
+        
+                        .tab-btns {
+                            &:hover {
+                                color: var(--color--docker-cont-editor-docker-tab-btn-color-hover);
+                            }
+                        }
                     }
                 }
             }
+            
         }
     }
 
     .status-bar {
-        background: var(--status-bar-background);
-        color: var(--status-bar-color);
+        background: var(--color--status-bar-background);
+        color: var(--color--status-bar-color);
 
         .status-text {
-            color: var(--status-bar-text-color);
+            color: var(--color--status-bar-text-color);
         }
 
         .title {
-            color: var(--status-bar-title-color);
+            color: var(--color--status-bar-title-color);
         }
     }
 }

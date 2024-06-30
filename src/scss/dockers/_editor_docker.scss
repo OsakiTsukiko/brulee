@@ -23,7 +23,6 @@
 
             display: flex;
             box-sizing: border-box;
-            // background: purple;
 
             .tab-cont {
                 height: 100%;
@@ -49,14 +48,11 @@
                     border-right-width: 2px;
                     border-right-style: solid;
                     cursor: pointer;
-
+                    border-bottom-width: 2px;
+                    border-bottom-style: solid;
+                    
                     &:last-child {
                         border-right: 0px solid transparent;
-                    }
-
-                    &.selected {
-                        border-bottom-width: 2px;
-                        border-bottom-style: solid;
                     }
 
                     .tab-icon {

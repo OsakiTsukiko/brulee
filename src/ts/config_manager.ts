@@ -4,20 +4,7 @@ import { root } from "./theme_editor";
 export { initialize_config, theme, update_theme };
 export type { BruleeTheme };
 
-const default_theme_config = {
-    "--main-cont-background": "#292828",
-    "--docker-cont-left-docker-background": "#363636",
-    "--docker-cont-button-docker-background": "#363636",
-    "--docker-cont-docker-button-background": "#292828",
-    "--docker-cont-docker-button-color": "#787070",
-    "--docker-cont-docker-button-hover-color": "#a89d9d",
-    "--docker-cont-docker-button-disabled-background": "#292828",
-    "--docker-cont-docker-button-disabled-color": "#3e3a3a",
-    "--status-bar-background": "#1c1b1b",
-    "--status-bar-color": "#a89d9d",
-    "--status-bar-text-color": "#787070",
-    "--status-bar-title-color": "#787070"
-};
+let default_theme_config: Record<string, string> = {};
 
 const theme_config_file = "theme/theme.brulee" // in AppConfig
 
@@ -37,6 +24,23 @@ async function update_theme(field: string, value: string) {
 }
 
 let initialize_config = async () => {
+    const root = document.documentElement;
+    const styles = getComputedStyle(root);
+
+    const cssVars: Record<string, string> = {};
+
+    // Iterate over the styles to find CSS variables
+    for (let i = 0; i < styles.length; i++) {
+        const prop = styles[i];
+        if (prop.startsWith('--')) {
+            const value = styles.getPropertyValue(prop).trim();
+            cssVars[prop] = value;
+            if (prop.startsWith("--color--")) {
+                default_theme_config[prop] = value;
+            }
+        }
+    }
+
     // Load Theme
     let theme_cfg_exists = await exists(
         theme_config_file, 

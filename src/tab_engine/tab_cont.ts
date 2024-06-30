@@ -8,6 +8,7 @@ class TabCont {
     content_cont: HTMLDivElement
 
     tabs: Array<Tab> = []
+    selected_tab: Tab | null = null;
 
     constructor() {
         this.root_element = document.createElement("div");
@@ -37,12 +38,52 @@ class TabCont {
     get_root() {return this.root_element;}
 
     add_tab(tab_title: string) {
-        for (let t of this.tabs) {
-            t.get_root().classList.remove("selected");
-        }
-        let tab = new Tab(tab_title, true);
+        
+        let tab = new Tab(tab_title, this, false);
         this.tabs.push(tab);
         this.tab_cont.appendChild(tab.get_root());
+
+        this.select_tab(tab);
+    }
+
+    remove_tab(tab: Tab) {
+        if (!this.tabs.includes(tab)) {
+            return;
+        }
+
+        let index = this.tabs.indexOf(tab);
+        this.tabs.splice(index, 1);
+        this.tab_cont.removeChild(tab.get_root());
+
+        if (this.tabs.length == 0) {
+            this.select_tab(null);
+            // IS EMPTYY
+        } else {
+            this.select_tab(this.tabs[0]);
+        }
+    }
+
+    select_tab(tab: Tab | null) {
+        if (tab == null) {
+            for (let t of this.tabs) {
+                t.visual_deselect();
+            }
+
+            this.selected_tab = null;
+
+            return;
+        }
+
+        if (!this.tabs.includes(tab)) {
+            return;
+        }
+
+        for (let t of this.tabs) {
+            t.visual_deselect();
+        }
+
+        tab.visual_select();
+        this.selected_tab = tab;
     }
 }
 
