@@ -1,4 +1,4 @@
-import { Tab } from "./tab";
+import { Tab, TabType } from "./tab";
 
 export { TabCont };
 
@@ -37,9 +37,18 @@ class TabCont {
 
     get_root() {return this.root_element;}
 
-    add_tab(tab_title: string) {
+    add_code_tab(tab_title: string) {
         
-        let tab = new Tab(tab_title, this, false);
+        let tab = new Tab(tab_title, this, TabType.CODE, false);
+        this.tabs.push(tab);
+        this.tab_cont.appendChild(tab.get_root());
+
+        this.select_tab(tab);
+    }
+
+    add_empty_tab(tab_title: string) {
+        
+        let tab = new Tab(tab_title, this, TabType.EMPTY, false);
         this.tabs.push(tab);
         this.tab_cont.appendChild(tab.get_root());
 
@@ -58,6 +67,7 @@ class TabCont {
         if (this.tabs.length == 0) {
             this.select_tab(null);
             // IS EMPTYY
+            this.add_empty_tab("EMPTY TAB");
         } else {
             this.select_tab(this.tabs[0]);
         }

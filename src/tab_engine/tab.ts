@@ -1,9 +1,16 @@
 import { TabCont } from "./tab_cont";
 
-export { Tab };
+export { Tab, TabType };
+
+enum TabType {
+    CODE,
+    EMPTY
+}
 
 class Tab {
     title: string
+    container: TabCont
+    type: TabType
     is_selected: boolean
 
     root_element: HTMLDivElement
@@ -13,11 +20,10 @@ class Tab {
 
     close_tab_btn: HTMLElement
 
-    container: TabCont
-
-    constructor(title: string, container: TabCont, is_selected: boolean = false) {
+    constructor(title: string, container: TabCont, type: TabType, is_selected: boolean = false) {
         this.title = title
         this.container = container
+        this.type = type;
         this.is_selected = is_selected
 
         this.root_element = document.createElement("div");

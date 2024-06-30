@@ -6,9 +6,9 @@ let root_tab;
 
 function start_engine() {
     root_tab = new TabCont();
-    root_tab.add_tab("10th Class".toString());
-    root_tab.add_tab("rust_file.rs".toString());
-    root_tab.add_tab("webserver.go".toString());
+    root_tab.add_code_tab("10th Class".toString());
+    root_tab.add_code_tab("rust_file.rs".toString());
+    root_tab.add_code_tab("webserver.go".toString());
 
     console.log("AYO");
     document.getElementById("editor-docker")?.appendChild(root_tab.get_root());
