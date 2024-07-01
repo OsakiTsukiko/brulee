@@ -1,13 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.ts" defer></script>
   </head>
 
   <body>
+
+    <div class="main-cont">
+      <div class="title-bar"><!-- TODO --></div>
+      <div class="docker-cont">
+
+        <div class="left-docker">
+          <div class="button-cont">
+            <!-- LEFT SIDE BUTTONS -->
+            
+            <div class="button docker-button" title="Toggle File Manager">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+
+            <div class="button docker-button" title="Toggle Git Manager">
+              <i class="fa-solid fa-shrimp"></i>
+            </div>
+
+            <div class="button docker-button" title="Toggle Project Settings">
+              <i class="fa-solid fa-fire-burner"></i>
+            </div>
+
+            <div class="padding"></div>
+
+            <div class="button docker-button" id="theme_editor_button" title="Theme Editor">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+
+            <div class="button docker-button" title="Settings">
+              <i class="fa-solid fa-carrot"></i>
+            </div>
+          
+          </div>
+          <div class="expanded-cont">
+
+          </div>
+        </div>
+
+        
+        <div class="editor-docker" id="editor-docker">
+          
+          <!--
+          <div class="editor-tab-container">
+            <div class="top-bar">
+              <div class="tab-cont" id="tab-cont">
+                
+                <div class="tab selected">
+                  <div class="tab-icon">
+                    <i class="fa-brands fa-rust"></i>
+                  </div>
+                  <div class="tab-title">
+                    <span>Test Tabdsadsdasdasddsadasdadsdadsadasdasdad</span>
+                  </div>
+                  <div class="tab-btns">
+                    <i class="fa-solid fa-dragon"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="btn-cont">
+                <i class="fa-solid fa-dungeon"></i>
+              </div>
+            </div>
+            <div class="content-cont">
+              
+            </div>
+          </div>
+          -->
+
+        </div>
+        
+        
+        <div class="button-docker">
+
+          <div class="button docker-button" title="Compile and Run">
+            <i class="fa-solid fa-cake-candles"></i>
+          </div>
+
+          <div class="button docker-button" title="Compile">
+            <i class="fa-solid fa-candy-cane"></i>
+          </div>
+
+          <div class="button docker-button" title="Run">
+            <i class="fa-solid fa-ice-cream"></i>
+          </div>
+
+
+        </div>
+      </div>
+      
+      <div class="status-bar">
+        <div class="status-icon status-none">
+          <i class="fa-solid fa-gauge"></i>
+        </div>
+        <div class="status-text">
+          STATUS
+        </div>
+        <div class="padding"></div>
+        <div class="title">BRULEE</div>
+        <div class="title-icon">
+          <img src="src/assets/brulee.png">
+        </div>
+      </div>
     
+    </div>
+
   </body>
 </html>

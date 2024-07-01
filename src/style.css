@@ -1,1 +1,388 @@
-/*# sourceMappingURL=style.css.map */
+@import './assets/fontawesome/css/all.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --color--main-cont-background: #292828;
+  --color--docker-cont-left-docker-background: #363636;
+  --color--docker-cont-button-docker-background: #363636;
+  --color--docker-cont-docker-button-background: #292828;
+  --color--docker-cont-docker-button-color: #787070;
+  --px--docker-cont-docker-button-border-radius: 5px;
+  --time--docker-cont-docker-button-transition: .125s;
+  --color--docker-cont-docker-button-hover-color: #a89d9d;
+  --color--docker-cont-docker-button-disabled-background: #292828;
+  --color--docker-cont-docker-button-disabled-color: #3e3a3a;
+  --color--docker-cont-editor-docker-tab-container-background: #1c1b1b;
+  --color--docker-cont-editor-docker-tab-color: #787070;
+  --color--docker-cont-editor-docker-tab-background: #292828;
+  --color--docker-cont-editor-docker-tab-border-right-color: #363636;
+  --color--docker-cont-editor-docker-tab-border-bottom-color-selected: #e6c0c0;
+  --color--docker-cont-editor-docker-tab-btn-color-hover: #a89d9d;
+  --color--status-bar-background: #1c1b1b;
+  --color--status-bar-color: #a89d9d;
+  --color--status-bar-text-color: #787070;
+  --color--status-bar-title-color: #787070;
+}
+
+.main-cont {
+  background-color: var(--color--main-cont-background);
+}
+.main-cont .docker-cont .left-docker {
+  background: var(--color--docker-cont-left-docker-background);
+}
+.main-cont .docker-cont .button-docker {
+  background: var(--color--docker-cont-button-docker-background);
+}
+.main-cont .docker-cont .docker-button {
+  background: var(--color--docker-cont-docker-button-background);
+  color: var(--color--docker-cont-docker-button-color);
+  border-radius: var(--px--docker-cont-docker-button-border-radius);
+  transition: var(--time--docker-cont-docker-button-transition);
+}
+.main-cont .docker-cont .docker-button:hover {
+  color: var(--color--docker-cont-docker-button-hover-color);
+}
+.main-cont .docker-cont .docker-button.button-disabled {
+  background: var(--color--docker-cont-docker-button-disabled-background);
+  color: var(--color--docker-cont-docker-button-disabled-color);
+}
+.main-cont .docker-cont .editor-docker .top-bar .tab-cont {
+  background: var(--color--docker-cont-editor-docker-tab-container-background);
+}
+.main-cont .docker-cont .editor-docker .top-bar .tab-cont .tab {
+  background: var(--color--docker-cont-editor-docker-tab-background);
+  color: var(--color--docker-cont-editor-docker-tab-color);
+  border-right-color: var(--color--docker-cont-editor-docker-tab-border-right-color);
+  border-bottom-color: var(--color--docker-cont-editor-docker-tab-background);
+}
+.main-cont .docker-cont .editor-docker .top-bar .tab-cont .tab.selected {
+  border-bottom-color: var(--color--docker-cont-editor-docker-tab-border-bottom-color-selected);
+}
+.main-cont .docker-cont .editor-docker .top-bar .tab-cont .tab .tab-btns:hover {
+  color: var(--color--docker-cont-editor-docker-tab-btn-color-hover);
+}
+.main-cont .status-bar {
+  background: var(--color--status-bar-background);
+  color: var(--color--status-bar-color);
+}
+.main-cont .status-bar .status-text {
+  color: var(--color--status-bar-text-color);
+}
+.main-cont .status-bar .title {
+  color: var(--color--status-bar-title-color);
+}
+
+.main-cont {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.main-cont .title-bar {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 0;
+}
+.main-cont .docker-cont {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+}
+.main-cont .docker-cont .left-docker {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.main-cont .docker-cont .left-docker .button-cont {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5px;
+  gap: 5px;
+}
+.main-cont .docker-cont .left-docker .button-cont .button {
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main-cont .docker-cont .left-docker .button-cont .padding {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+.main-cont .docker-cont .editor-docker {
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont {
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* width */
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont::-webkit-scrollbar {
+  display: none;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab {
+  min-width: 120px;
+  max-width: 250px;
+  display: flex;
+  box-sizing: border-box;
+  border-right-width: 2px;
+  border-right-style: solid;
+  cursor: pointer;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab:last-child {
+  border-right: 0px solid transparent;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-icon {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  font-size: 17.5px;
+  padding: 5px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-title {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-title span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .tab-cont .tab .tab-btns {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 7.5px;
+  font-size: 15px;
+  transition: 0.125s;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .btn-cont {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 0px;
+  background: #1a1a1a;
+  box-sizing: border-box;
+  padding: 7.5px;
+  display: flex;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .btn-cont i {
+  color: #787070;
+  font-size: 17.5px;
+  cursor: pointer;
+  transition: 0.125s;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .top-bar .btn-cont i:hover {
+  color: #a89d9d;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .content-cont {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .content-cont .tab-content {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .content-cont .tab-content .center-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-cont .docker-cont .editor-docker .editor-tab-container .content-cont .tab-content .center-cont .logo {
+  opacity: 0.3;
+  max-width: 300px;
+  width: 80%;
+}
+.main-cont .docker-cont .button-docker {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5px;
+  gap: 5px;
+}
+.main-cont .docker-cont .button-docker .button {
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main-cont .docker-cont .button-docker .padding {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+.main-cont .status-bar {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 5px;
+  gap: 5px;
+}
+.main-cont .status-bar .status-icon {
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.main-cont .status-bar .status-icon.status-loading {
+  background: royalblue;
+  color: rgb(34, 50, 95);
+}
+.main-cont .status-bar .status-icon.status-success {
+  background: rgb(88, 197, 135);
+  color: rgb(41, 99, 66);
+}
+.main-cont .status-bar .status-icon.status-warning {
+  background: rgb(233, 225, 122);
+  color: rgb(126, 122, 74);
+}
+.main-cont .status-bar .status-icon.status-error {
+  background: rgb(231, 99, 75);
+  color: rgb(122, 52, 39);
+}
+.main-cont .status-bar .status-icon.status-none {
+  background: white;
+  color: gray;
+  opacity: 0.25;
+}
+.main-cont .status-bar .status-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik Mono One";
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.main-cont .status-bar .padding {
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+}
+.main-cont .status-bar .title {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik Mono One";
+  padding-left: 5px;
+}
+.main-cont .status-bar .title-icon {
+  box-sizing: border-box;
+  width: 27px;
+  height: 27px;
+}
+.main-cont .status-bar .title-icon img {
+  width: 100%;
+  height: 100%;
+  background: 0;
+}
+
+:root {
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */

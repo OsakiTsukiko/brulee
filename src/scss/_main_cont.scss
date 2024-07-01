@@ -1,0 +1,27 @@
+.main-cont {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .title-bar {
+        width: 100%;
+        height: fit-content;
+        min-height: 0;
+    }
+
+    .docker-cont {
+        width: 100%;
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: row;
+
+        @import './dockers/left_docker';
+        @import './dockers/editor_docker';
+        @import './dockers/button_docker';
+    }
+
+    @import './status_bar';
+}
