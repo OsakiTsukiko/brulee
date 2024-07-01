@@ -26,7 +26,7 @@ listen<Record<string, string>>("change_theme_variable", (event) => {
     update_theme(event.payload["name"], event.payload["value"]);
 });
 
-listen("request_theme_object", (event) => {
+listen("request_theme_object", (/* event */) => {
     emit("respond_theme_object", 
         theme as Record<string, string>
     )

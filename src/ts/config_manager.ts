@@ -1,5 +1,4 @@
 import { BaseDirectory, createDir, exists, readTextFile, writeTextFile } from "@tauri-apps/api/fs";
-import { root } from "./theme_editor";
 
 export { initialize_config, theme, update_theme };
 export type { BruleeTheme };

@@ -36,7 +36,7 @@ class Tab {
             this.root_element.classList.add("selected");
         }
 
-        this.root_element.onclick = (e) => {
+        this.root_element.onclick = (/* e */) => {
             console.log("cliked on tab: ", this.title)
             container.select_tab(this);
         }
