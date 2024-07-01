@@ -94,6 +94,12 @@ class TabCont {
 
         tab.visual_select();
         this.selected_tab = tab;
+
+        for (let child of this.content_cont.children) {
+            this.content_cont.removeChild(child);
+        }
+
+        this.content_cont.appendChild(tab.content.get_root());
     }
 }
 

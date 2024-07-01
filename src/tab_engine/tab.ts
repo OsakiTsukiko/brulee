@@ -1,4 +1,5 @@
 import { TabCont } from "./tab_cont";
+import { TabContent } from "./tab_content";
 
 export { Tab, TabType };
 
@@ -12,6 +13,7 @@ class Tab {
     container: TabCont
     type: TabType
     is_selected: boolean
+    content: TabContent
 
     root_element: HTMLDivElement
     tab_icon: HTMLDivElement
@@ -25,6 +27,8 @@ class Tab {
         this.container = container
         this.type = type;
         this.is_selected = is_selected
+
+        this.content = new TabContent(this, type);
 
         this.root_element = document.createElement("div");
         this.root_element.classList.add("tab");
